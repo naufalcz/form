@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata</title>
+    <style>
+        * {
+            font-family: 'Quicksand';
+            color: white;
+            text-shadow: 2px 2px 15px black;
+        }
+        body {
+            background-image: url(city.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        h1 {
+            font-size: 50px;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        main .form {
+            margin-top: 30px;
+            background: transparent;
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border: 2px solid white;
+            border-radius: 20px;
+        }
+        main .input-form {
+            margin-top: 150px;
+        }
+        main .input-column {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            top: -75px;
+        }
+        .input-form input {
+            margin-top: 20px;
+            width: 300px;
+            border: 2px solid white;
+            background: transparent;
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        button {
+            margin-top: 30px;
+            background-color: black;
+            border: none;
+            padding: 10px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: rgb(41, 41, 41);
+            color: gray;
+            transition: ease-in-out 0.1s;
+        }
+        .refresh {
+            background-color: red;
+            width: 100%;
+        }
+        .refresh:hover {
+            background-color: rgb(152, 2, 2);
+        }
+        ::placeholder {
+            color: white;
+        }
+
+        @media screen and (max-width: 330px) {
+            .form {
+                font-size: 15px;
+            }
+
+            .input-column input{
+               width: 200px;
+            }
+        }
+
+        @media screen and (max-width: 275px) {
+            .form {
+                font-size: 12px;
+            }
+
+            .input-column input {
+                width: 150px;
+            }
+
+            .input-column {
+                position: relative;
+                top: -100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>BIODATA KAMU</h1>
+        <div class="form">
+            <div id="nama">Nama : -</div>
+            <div id="usia">Usia : -</div>
+            <div id="tempattinggal">Tempat Tinggal : -</div>
+            <div id="asalsekolah">Asal Sekolah : -</div>
+        </div>
+
+        <div class="input-form">
+            <div class="input-column">
+                <input id="inputnama" placeholder="nama.." required>
+                <input id="inputusia" placeholder="usia.." required>
+                <input id="inputtempattinggal" placeholder="tempat tinggal.." required>
+                <input id="inputasalsekolah" placeholder="asal sekolah.." required>
+                <button onclick="biodat()">Masukkan Biodata</button>
+                <a href="index.html">
+                    <button class="refresh">Refresh</button>
+                </a>
+            </div>
+        </div>
+    </main>
+    <script src="bio.js" type="text/javascript"/>
+</body>
+</html>
